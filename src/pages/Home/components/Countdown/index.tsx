@@ -25,7 +25,7 @@ export function Countdown() {
   const seconds = String(secondsAmount).padStart(2, '0')
 
   useEffect(() => {
-    let interval: number
+    let interval: ReturnType<typeof setInterval>
 
     if (activeCycle) {
       interval = setInterval(() => {
